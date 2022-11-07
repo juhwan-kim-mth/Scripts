@@ -357,6 +357,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593a888b52ffc4619b4eb25e84458692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCar:
+    speed: 15
+    color: Red
+    highestSpeed: 30
 --- !u!4 &1434405520
 Transform:
   m_ObjectHideFlags: 0
