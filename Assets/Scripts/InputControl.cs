@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class InputControl : MonoBehaviour
 {
+    
+    //public float speed;
+
+    public GameObject ball;
     // Start is called before the first frame update
     void Start()
     { 
@@ -24,14 +28,41 @@ public class InputControl : MonoBehaviour
         //     GetComponent<Renderer>().material.color = Color.yellow;
         // }
 
-        if (Input.GetButtonDown("Jump"))
+        // if (Input.GetButtonDown("Jump"))
+        //{
+        //    GetComponent<Renderer>().material.color = Color.green; 
+        //}
+
+        //if (Input.GetButtonUp("Jump"))
+        //{
+        //    GetComponent<Renderer>().material.color = Color.yellow;
+        // }
+        // float xInput = Input.GetAxis("Horizontal");
+        // float yInput = Input.GetAxis("Vertical");
+        //
+        // transform.Translate(xInput * speed * Time.deltaTime, 0, 0);
+        // transform.Translate(0, yInput * speed * Time.deltaTime, 0);
+
+        /*if (Input.GetButtonDown("Fire1"))
         {
-            GetComponent<Renderer>().material.color = Color.green; 
+            print("Left Click");
+            //print(Input.mousePosition.x + " " + Input.mousePosition.y);
+            Vector3 pos = Input.mousePosition;
+            pos.z = 10f;
+
+            pos = Camera.main.ScreenToWorldPoint(pos);  //Converting screen coordinates to world coordinates
+            Instantiate(ball, pos, Quaternion.identity);
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonDown("Fire2"))
         {
-            GetComponent<Renderer>().material.color = Color.yellow;
-        }
+            print("Right Click");
+        }*/
+
+
+    }        
+    void OnMouseDown()
+    { 
+        Destroy(gameObject);
     }
 }
